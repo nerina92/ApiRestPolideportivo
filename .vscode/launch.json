@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ApirestPruebaApplication<apirest_prueba>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.panvdev.apirest_prueba.ApirestPruebaApplication",
+            "projectName": "apirest_prueba",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

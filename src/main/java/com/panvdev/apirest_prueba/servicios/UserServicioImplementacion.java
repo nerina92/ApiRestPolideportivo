@@ -16,22 +16,22 @@ public class UserServicioImplementacion implements IUserServicios{
 	UserRepositorio userrepositorio;
 	
 	@Override
-	public List<User> obtenertodo() {
+	public List<UserRepositorio> obtenertodo() {
 		return userrepositorio.findAll();
 	}
 
 	@Override
 	public User guardar(User user) {
-		return userrepositorio.save(user);
+		return userrepositorio.saveAll(user);
 	}
 
 	@Override
-	public User obtenerPorId(long IdUser) {
-		return userrepositorio.findById(IdUser).orElse(null);
+	public User obtenerPorId(int IdUser) {
+		return (User) userrepositorio.findById(IdUser).orElse(null);
 	}
 
 	@Override
-	public void eliminar(long IdUser) {
+	public void eliminar(int IdUser) {
 		userrepositorio.deleteById(IdUser);
 	}
 	

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.panvdev.apirest_prueba.modelos.User;
+import com.panvdev.apirest_prueba.repositorios.UserRepositorio;
 import com.panvdev.apirest_prueba.servicios.UserServicioImplementacion;
 
 @RestController
@@ -27,7 +28,7 @@ public class UsuarioControlador {
 	
 	
 	@GetMapping("/usuarios")
-	public List<User> obtenerClientes(){
+	public List<UserRepositorio> obtenerUsuarios(){
 		return usuarioservicio.obtenertodo();
 	}
 	
@@ -36,10 +37,10 @@ public class UsuarioControlador {
 	public ResponseEntity<User> guardarUsuario(@RequestBody User user){
 		User nuevo_usuario = usuarioservicio.guardar(user);
 		return new ResponseEntity<>(nuevo_usuario, HttpStatus.CREATED);
-	}
+	}	
 	
 	@GetMapping("/usuario/{id}")
-	public ResponseEntity<User> obtenerUsuarioId(@PathVariable long id){
+	public ResponseEntity<User> obtenerUsuarioId(@PathVariable int id){
 		User usuarioPorId = usuarioservicio.obtenerPorId(id);
 		return ResponseEntity.ok(usuarioPorId);
 	}
