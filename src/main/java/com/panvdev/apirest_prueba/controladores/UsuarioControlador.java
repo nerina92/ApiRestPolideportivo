@@ -28,7 +28,7 @@ public class UsuarioControlador {
 	
 	
 	@GetMapping("/usuarios")
-	public List<UserRepositorio> obtenerUsuarios(){
+	public List<User> obtenerUsuarios(){
 		return usuarioservicio.obtenertodo();
 	}
 	
@@ -45,8 +45,8 @@ public class UsuarioControlador {
 		return ResponseEntity.ok(usuarioPorId);
 	}
 	
-	/*@PutMapping("/usuario/{id}")
-	public ResponseEntity<User> actualizarUsuario(@PathVariable long id, @RequestBody User usuario){
+	@PutMapping("/usuario/{id}")
+	public ResponseEntity<User> actualizarUsuario(@PathVariable int id, @RequestBody User usuario){
 		User usuarioPorId = usuarioservicio.obtenerPorId(id);
 		usuarioPorId.setNombre(usuario.getNombre());
 		usuarioPorId.setApellido(usuario.getApellido());
@@ -57,13 +57,13 @@ public class UsuarioControlador {
 	}
 	
 	@DeleteMapping("/usuario/{id}")
-	public ResponseEntity<HashMap<String,Boolean>> eliminarUsuario(@PathVariable long id) {
+	public ResponseEntity<HashMap<String,Boolean>> eliminarUsuario(@PathVariable int id) {
 		this.usuarioservicio.eliminar(id);
 		
 		HashMap<String, Boolean> estadoUsuarioEliminado = new HashMap<>();
 		estadoUsuarioEliminado.put("eliminado", true);
 		return ResponseEntity.ok(estadoUsuarioEliminado);
-	}*/
+	}
 	
 	
 	

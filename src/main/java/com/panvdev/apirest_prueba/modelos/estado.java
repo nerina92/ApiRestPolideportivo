@@ -8,21 +8,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class estado implements Serializable {
+public class Estado implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-    private int tipo;
+    private String tipo;
 
 	
-	public estado() {
+	public Estado() {
 		
 	}
 	
-	public estado(int id, int tipo) {
+	public Estado(int id, String tipo) {
 		this.id=id;
         this.tipo=tipo;
         
@@ -32,16 +32,13 @@ public class estado implements Serializable {
 		return id;
 	}
 
-	public int setId(int id) {
-		return id;
-	}
 
-	public int getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
 
-	public int setTipo(int tipo) {
-		return tipo;
+	public void setTipo(String tipo) {
+		 this.tipo=tipo;
 	}
 
 }

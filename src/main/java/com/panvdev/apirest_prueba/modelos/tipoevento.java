@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class tipoevento implements Serializable {
+public class Tipoevento implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -17,21 +17,17 @@ public class tipoevento implements Serializable {
 	private int id;
     private int nombre;
 	
-	public tipoevento() {
+	public Tipoevento() {
 		
 	}
 	
-	public tipoevento(int id, int nombre) {
+	public Tipoevento(int id, int nombre) {
 		this.id=id;
         this.nombre=nombre;
         
 	}
 
 	public int getid() {
-		return id;
-	}
-
-	public int setId(int id) {
 		return id;
 	}
 

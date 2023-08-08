@@ -1,44 +1,42 @@
 package com.panvdev.apirest_prueba.modelos;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.hibernate.type.descriptor.sql.TinyIntTypeDescriptor;
-import org.hibernate.type.descriptor.sql.VarcharTypeDescriptor;
-
 @Entity
-public class evento implements Serializable {
+public class Evento implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private VarcharTypeDescriptor nombre;
-	private VarcharTypeDescriptor descripcion;
-	private int fechaInicio;
-	private int fechaFin;
-	private TinyIntTypeDescriptor fechaLucro; 
+	private String nombre;
+	private String descripcion;
+	private Date fechaInicio;
+	private Date fechaFin;
+	private Boolean finesLucro; 
     private int tipo;
     private int estado;
     private int userId;
 
 	
-	public evento() {
+	public Evento() {
 		
 	}
 	
-	public evento(int id, VarcharTypeDescriptor nombre, VarcharTypeDescriptor descripcion, int fechaInicio, int fechaFin, TinyIntTypeDescriptor fechaLucro, int tipo, int estado, int userId) {
+	public Evento(int id, String nombre, String descripcion, Date fechaInicio, Date fechaFin, Boolean finesLucro, int tipo, int estado, int userId) {
 		this.id=id;
         this.nombre=nombre;
         this.descripcion=descripcion;
         this.fechaInicio=fechaInicio;
         this.fechaFin=fechaFin;
-        this.fechaLucro=fechaLucro;
+        this.finesLucro=finesLucro;
         this.tipo=tipo;
         this.estado=estado;
         this.userId=userId;
@@ -49,48 +47,44 @@ public class evento implements Serializable {
 		return id;
 	}
 
-	public int setId(int id) {
-		return id;
-	}
-
-	public VarcharTypeDescriptor getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 
-	public VarcharTypeDescriptor setNombre(VarcharTypeDescriptor nombre) {
+	public String setNombre(String nombre) {
 		return nombre;
 	}
 
-	public VarcharTypeDescriptor getDescripcion() {
+	public String getDescripcion() {
 		return descripcion;
 	}
 
-	public VarcharTypeDescriptor setDescripcion(VarcharTypeDescriptor descripcion) {
+	public String setDescripcion(String descripcion) {
 		return descripcion;
 	}
 
-	public int getFechaInicio() {
+	public Date getFechaInicio() {
 		return fechaInicio;
 	}
 
-	public int setFechaInicio(int fechaInicio) {
+	public Date setFechaInicio(Date fechaInicio) {
 		return fechaInicio;
 	}
 
-	public int getFechaFin() {
+	public Date getFechaFin() {
 		return fechaFin;
 	}
 
-	public int setFechaFin(int fechaFin) {
+	public Date setFechaFin(Date fechaFin) {
 		return fechaFin;
 	}
 
-	public TinyIntTypeDescriptor getFechaLucro() {
-		return fechaLucro;
+	public Boolean getFinesLucro() {
+		return finesLucro;
 	}
 
-	public TinyIntTypeDescriptor setFechaLucro (TinyIntTypeDescriptor fechaLucro) {
-		return fechaLucro;
+	public Boolean setfinesLucro (Boolean finesLucro) {
+		return finesLucro;
 	}
 	
 	public int getTipo() {

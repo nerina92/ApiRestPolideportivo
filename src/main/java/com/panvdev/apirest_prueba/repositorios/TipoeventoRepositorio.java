@@ -3,9 +3,9 @@ package com.panvdev.apirest_prueba.repositorios;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.panvdev.apirest_prueba.modelos.User;
+import com.panvdev.apirest_prueba.modelos.Tipoevento;
 
 @Repository
-public interface UserRepositorio extends JpaRepository<User, Integer> {
+public interface TipoeventoRepositorio extends JpaRepository<Tipoevento, Integer> {
 
 }
