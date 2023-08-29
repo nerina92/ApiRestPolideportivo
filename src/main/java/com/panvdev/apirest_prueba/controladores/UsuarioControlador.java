@@ -20,7 +20,7 @@ import com.panvdev.apirest_prueba.repositorios.UserRepositorio;
 import com.panvdev.apirest_prueba.servicios.UserServicioImplementacion;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v2")
 public class UsuarioControlador {
 	
 	@Autowired
