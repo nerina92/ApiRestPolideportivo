@@ -57,6 +57,6 @@ public class EstadoControlador {
 		HashMap<String, Boolean> estadoEliminado = new HashMap<>();
 		estadoEliminado.put("eliminado", true);
 		return ResponseEntity.ok(estadoEliminado);
-	}
+	}*/
 	
 }
