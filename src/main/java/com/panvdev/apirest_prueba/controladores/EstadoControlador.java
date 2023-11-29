@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.panvdev.apirest_prueba.modelos.Estado;
-import com.panvdev.apirest_prueba.repositorios.EstadoRepositorio;
 import com.panvdev.apirest_prueba.servicios.EstadoServicioImplementacion;
 
 @RestController
@@ -51,7 +50,7 @@ public class EstadoControlador {
 		return new ResponseEntity<>(estado_actualizado, HttpStatus.CREATED);
 	}
 	
-	@DeleteMapping("/estados/{id}")
+/* 	@DeleteMapping("/estados/{id}")
 	public ResponseEntity<HashMap<String,Boolean>> eliminarEstado(@PathVariable int id) {
 		this.estadoservicio.eliminar(id);
 		

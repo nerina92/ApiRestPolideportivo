@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.panvdev.apirest_prueba.modelos.Evento;
-import com.panvdev.apirest_prueba.repositorios.EventoRepositorio;
 import com.panvdev.apirest_prueba.servicios.EventoServicioImplementacion;
 
 @RestController

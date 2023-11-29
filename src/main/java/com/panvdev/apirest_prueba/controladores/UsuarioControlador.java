@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.panvdev.apirest_prueba.modelos.User;
-import com.panvdev.apirest_prueba.repositorios.UserRepositorio;
 import com.panvdev.apirest_prueba.servicios.UserServicioImplementacion;
 
 @RestController
